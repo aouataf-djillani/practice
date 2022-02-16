@@ -48,4 +48,7 @@ def mergeSort(arr):
     return arr    
 
 arr=[11, 3, 7, 5, 2, 77,1,90,12,67,8,4]
-print(mergeSort(arr))
+arr1=[5,1,1,2,0,0]
+print(mergeSort(arr1))
+
+s

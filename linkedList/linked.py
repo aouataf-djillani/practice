@@ -1,7 +1,3 @@
-from ast import Delete
-from email import header
-
-
 class Node:
     """
     Create a node with data and reference to next node 
@@ -22,9 +18,7 @@ print(n1)
 """
     a linked list class 
     with a head 
-
 """
-
 class linked:
     def __init__(self) -> None:
         self.head=None
@@ -52,7 +46,7 @@ class linked:
     
     """
     preappend: 
-    st new node 
+    set new node 
     set current to head 
     move head to new.next node
     set new node as head 
@@ -67,7 +61,7 @@ class linked:
     while position > 1 we move current to next node we decrement until we et to 1
     set prev as current 
     after as current.nextnode 
-    make previous point to new and new point to after 
+    set previous point to new and new point to after 
     """    
     def insert(self, data, index):
         if index==0:
@@ -92,7 +86,7 @@ class linked:
     delete a key value
     """
     def delete(self, key):
-        def delete (self,key):
+        
         current=self.head
         previous=None
         found=False
@@ -107,13 +101,23 @@ class linked:
                 previous=current
                 current=current.nextNode
         return current
-        
+    def searchByIndex(self, index):
+        if index==0:
+            return self.head
+        else:
+            current=self.head
+            position=0
+            while position<index:
+                current=current.nextNode
+                position+=1
+            return current
     """
     string representation
     create empty list 
     set current to head 
     traverse while current is not none  append each current as a string move current to nextnode
     """
+    
 
     def __repr__(self) -> str:
         arr=[]
@@ -123,8 +127,6 @@ class linked:
             arr.append(f"{current.data}")
             current=current.nextNode
         return "->".join(arr)
-
-
 
 l=linked()
 l.add(5)
