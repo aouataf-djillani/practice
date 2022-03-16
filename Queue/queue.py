@@ -36,7 +36,7 @@ class Queue:
 
     def enqueue(self, val):
         """
-        enqueuing is adding a node ater the tail and setting tai to new node 
+        enqueuing is adding a node after the tail and setting tail to new node 
         """
         new=Node(val)
         if self.tail is None:
